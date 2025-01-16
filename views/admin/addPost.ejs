@@ -1,0 +1,21 @@
+<div class="container mt-5">
+    <h1 class="mb-4">Create a New Post</h1>
+
+    <!-- New Post Form -->
+    <form action="/admin/post/new" method="POST">
+        <!-- Title Field -->
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+
+        <!-- Body Field -->
+        <div class="mb-3">
+            <label for="body" class="form-label">Body</label>
+            <textarea class="form-control" id="body" name="body" rows="5" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Create Post</button>
+    </form>
+</div>

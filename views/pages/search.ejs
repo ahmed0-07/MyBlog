@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-8">
+        <% array.forEach(element => { %>
+            <div class="card mb-3">
+                <div class="card-body">
+                <h5 class="card-title"><%= element.title %></h5>
+                <p class="card-text"><%= element.body %></p>
+                <a href="/post/<%= element._id %>" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>

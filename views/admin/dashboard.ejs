@@ -1,0 +1,25 @@
+<div class="col-md-8">
+    <!-- New Post Button -->
+    <div class="mb-3">
+        <a href="/admin/post/new" class="btn btn-success">New Post</a>
+    </div>
+
+    <!-- List of Posts -->
+    <% data.forEach(d => { %>
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title"><%= d.title %></h5>
+                <p class="card-text"><%= d.body %></p>
+                <a href="/post/<%= d._id %>" class="btn btn-primary">Read More</a>
+
+                <!-- Edit Button -->
+                <a href="/post/edit/<%= d._id %>" class="btn btn-warning">Edit</a>
+
+                <!-- Delete Button -->
+                <form action="/post/delete/<%= d._id %>" method="POST" style="display: inline;">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    <% }) %>
+</div>
