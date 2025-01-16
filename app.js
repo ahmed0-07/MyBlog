@@ -7,7 +7,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 
 //database connection
-const connectDB = require('./server/config/dp');
+const connectDB = require('./server/config/db');
 connectDB();
 
 
